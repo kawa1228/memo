@@ -1,5 +1,5 @@
-<template>
 <!--test-->
+<template>
 <div class="editor">
     <h1>めも画面</h1>
     <span>{{ user.displayName }}</span>
