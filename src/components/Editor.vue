@@ -10,6 +10,7 @@
                 </div>
             <button class="addMemoBtn" @click="addMemo">メモの追加</button>
             <button class="deleateMemoBtn" v-if="memos.length>1" @click="deleteMemo">選択中のメモを削除</button>
+            <button class="saveMemosBtn" @click="saveMemos">メモの保存</button>
         </div>
         <textarea class="markdown" v-model="memos[selectedIndex].markdown"></textarea>
         <div class="preview" v-html="preview()"></div>
@@ -30,7 +31,7 @@ export default {
             }],
             selectedIndex: 0
         }
-    },
+    },    
     methods: {
         logout:function(){
             firebase.auth().signOut();
@@ -54,6 +55,12 @@ export default {
             if(this.selectedIndex>0){
                 this.selectedIndex--;
             }
+        },
+        saveMemos:function(){
+            firevase
+            .database()
+            .ref('memos/'+this.user.uid)
+            .set(this.memos);
         },
     }
 }
@@ -95,5 +102,8 @@ export default {
     float: left;
     width: 40%;
     text-align: left;
+}
+deleteMemoBtn{
+    margin: 10px;
 }
 </style>
