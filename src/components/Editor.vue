@@ -68,7 +68,7 @@ export default {
             }
         },
         saveMemos:function(){
-            firevase
+            firebase
             .database()
             .ref('memos/'+this.user.uid)
             .set(this.memos);
