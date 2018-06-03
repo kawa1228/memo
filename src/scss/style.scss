@@ -166,11 +166,10 @@ span{
     border-radius: 8px;
     background-color:#42b983;
     color: white;
-
 }
 .deleateMemoBtn{
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 .previewArea {
     flex-direction: column;
@@ -187,6 +186,7 @@ span{
 }
 .buttonList{
     display: flex;
+    justify-content: flex-start;
     padding: 10px;
     border-bottom: 1px solid #d3d3d3;
 }
