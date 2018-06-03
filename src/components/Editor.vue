@@ -1,19 +1,27 @@
 <template>
 <div class="editor">
-        <h1>めも画面</h1>
+    <div class="editorContainer">
+        <h1 class="EditorTitle">Online Memo Editor</h1>
+        <button class="logout" @click="logout"> Logout <i class="fas fa-sign-out-alt"></i></button>
         <span>{{ user.displayName }}</span>
-        <button @click="logout">ログアウト</button>
-    <div>
+    </div>
+
+    <div class="main">
         <div class="memoListWrapper">
+            <div class="buttonList">
+                <button class="addMemoBtn" @click="addMemo"><i class="fas fa-plus"></i></button>
+                <button class="deleateMemoBtn" v-if="memos.length>1" @click="deleteMemo"><i class="fas fa-trash-alt"></i></button>
+                <button class="saveMemosBtn" @click="saveMemos"><i class="far fa-save"></i></button>
+            </div>
                 <div class="memoList"  v-for="(memo, index) in memos" @click="selectMemo(index)" v-bind:data-selected="index == selectedIndex">
                     <p class="memoTitle">{{ displayTitle(memo.markdown)}}</p>
                 </div>
-            <button class="addMemoBtn" @click="addMemo">メモの追加</button>
-            <button class="deleateMemoBtn" v-if="memos.length>1" @click="deleteMemo">選択中のメモを削除</button>
-            <button class="saveMemosBtn" @click="saveMemos">メモの保存</button>
+
         </div>
         <textarea class="markdown" v-model="memos[selectedIndex].markdown"></textarea>
-        <div class="preview" v-html="preview()"></div>
+        <div class="previewArea"> <p class="area">Preview Area </p>
+           <div class="preview" v-html="preview()"></div>
+        </div>
     </div>
 </div>
 </template>
@@ -78,21 +86,23 @@ export default {
 </script>
 <style lang="scss" scoped>
 .memoListWrapper{
-    width: 19%;
+    width: 20%;
     float: left;
-    border-top: 1px solid #000;
+    border-top: 1px solid #d3d3d3;
 }
 .memoList{
     padding: 10px;
     box-sizing: border-box;
     text-align: left;
-    border-bottom: 1px solid#000;
+    border-bottom: 1px solid #d3d3d3;
     //evenはlistの偶数番目に色がつく
     &:nth-child(even){
-        background-color: #ccc;
+        background-color:#ffffe0;
+        opacity: 0.8;
     }
     &[data-selected="true"]{
-        background-color: #ccf;
+        background-color: #c2ffe3;
+        opacity: 0.8;
     }
 }
 .memoTitle{
@@ -101,20 +111,10 @@ export default {
     white-space:nowrap;
     overflow: hidden;
 }
-.addMemoBtn{
-    margin-top:20px;
-}
 .markdown{
     float: left;
-    width:40%;
+    width:50%;
     height: 500px;
 }
-.preview{
-    float: left;
-    width: 40%;
-    text-align: left;
-}
-deleteMemoBtn{
-    margin: 10px;
-}
+
 </style>

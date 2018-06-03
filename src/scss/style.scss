@@ -1,8 +1,125 @@
 // styleをかいていく
-li {
-    float: left;
-    margin: 10px;
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.title {
+    font-family: 'Rochester', cursive;
+    font-weight: bold;
+    font-size: 50px;
+    margin: 20px;
+    color: #fff066;
+    opacity: 0.8;
+    text-shadow: 2px 2px 5px gray;
+    text-align: center;
+}
+h2 {
+    color: #666666;
+    font-size: 20px;
+    margin: 20px;
+    text-align: center;
 }
 a:hover {
     color: #42b983
+}
+.googleIcon{
+    color: white;
+}
+.login {
+    text-align: center;
+}
+.login button{
+    margin: 20px;
+    width: 300px;
+    height: 40px;
+    color: white;
+    background-color: #42b983;
+    opacity: 0.8;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 7px #329166;
+    border: #42b983;
+}
+.login button:hover{
+    background-color: #3dac7a;
+}
+.login button:active {
+    position: relative;
+    top: 6px;
+    box-shadow: none;
+}
+ul{
+    display: flex;
+    justify-content: center;
+}
+.footer {
+    border-top: 1px solid #9b9b9b;
+    padding: 10px;
+}
+li {
+    color: #666666;
+    margin: 20px;
+    text-align: center;
+}
+//Editor
+.editorContainer{
+    color: #4e4e4e;
+}
+.main{
+    display: flex;
+    width: 100%;
+}
+.EditorTitle{
+    font-family: 'Rochester', cursive;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 20px;
+    color: #fff066;
+    opacity: 0.8;
+    text-shadow: 2px 2px 8px gray;
+    float: left;
+}
+span{
+    float: right;
+    margin:20px 0px;
+}
+.logout {
+    float: right;
+    margin:13px;
+    width: 100px;
+    height: 35px;
+    border-radius: 8px;
+    background-color:#42b983;
+    color: white;
+}
+.addMemoBtn,.deleateMemoBtn,.saveMemosBtn {
+    width: 40px;
+    height: 35px;
+    border-radius: 8px;
+    background-color:#42b983;
+    color: white;
+
+}
+.previewArea {
+    flex-direction: column;
+    float: left;
+    width: 30%;
+    text-align: left;
+}
+.area{
+    padding: 10px;
+    border-top: 1px solid #d3d3d3;
+    border-bottom: 1px dotted #d3d3d3;
+}
+.buttonList{
+    padding: 10px;
+    border-bottom: 1px solid #d3d3d3;
+}
+.markdown{
+    background-color: #e6e6e6;
+    border:1px solid #d3d3d3;
 }

@@ -1,9 +1,10 @@
 <template>
 <div id ="home">
-    <title>{{ titile }}</title>
-    <h1>{{ msg }}</h1>　<!--@clickはHTMLのonClickみたいなもの-->
+    <div class="container">
+    <h1 class="title">{{ msg }}</h1>　<!--@clickはHTMLのonClickみたいなもの-->
     <h2>オンラインで簡単メモ作成</h2>
-    <button @click="googleLogin">Google アカウントでログイン</button>
+    <div class="login"><button @click="googleLogin"><i class="fab fa-google googleIcon"></i>　Google アカウントでログイン</button></div>
+    <div class="footer">
     <ul>
         <li>
             <a href="#">利用規約</a>
@@ -12,6 +13,8 @@
             <a href="#">プライバシーポリシー</a>
         </li>
     </ul>
+    </div>
+    </div>
 </div>
 </template>
 
@@ -20,8 +23,7 @@ export default {
     name:'home',
     data(){
         return{
-            msg:'Welcome to Memo',
-            title:'めも'
+            msg:'Online Memo Editor',
         }
     },
     //googleLoginという関数の内容を記載
