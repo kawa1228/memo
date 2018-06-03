@@ -151,12 +151,13 @@ span{
 .logout {
     float: right;
     margin:13px;
-    width: 100px;
+    width: 130px;
     height: 35px;
-    text-align: center;
     border-radius: 8px;
     background-color:#42b983;
     color: white;
+    display: block;
+    margin: 0auto;
 }
 .addMemoBtn,.deleateMemoBtn,.saveMemosBtn {
     width: 40px;
@@ -166,6 +167,10 @@ span{
     background-color:#42b983;
     color: white;
 
+}
+.deleateMemoBtn{
+    margin-left: 5px;
+    margin-right: 5px;
 }
 .previewArea {
     flex-direction: column;
@@ -181,6 +186,7 @@ span{
     color: #666666;
 }
 .buttonList{
+    display: flex;
     padding: 10px;
     border-bottom: 1px solid #d3d3d3;
 }
@@ -188,7 +194,6 @@ span{
     background-color: #e6e6e6;
     border:1px solid #d3d3d3;
 }
-//responsive
 @media only screen and (max-width:600px){
     .editor{
         font-size: 20px;

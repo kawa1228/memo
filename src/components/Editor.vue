@@ -2,7 +2,7 @@
 <div class="editor">
     <div class="editorContainer">
         <h1 class="EditorTitle">Online Memo Editor</h1>
-        <button class="logout" @click="logout"> Logout <i class="fas fa-sign-out-alt"></i></button>
+        <button class="logout" @click="logout">　Logout <i class="fas fa-sign-out-alt"></i></button>
         <span>{{ user.displayName }}</span>
     </div>
 
