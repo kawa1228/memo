@@ -84,37 +84,3 @@ export default {
     }
 }
 </script>
-<style lang="scss" scoped>
-.memoListWrapper{
-    width: 20%;
-    float: left;
-    border-top: 1px solid #d3d3d3;
-}
-.memoList{
-    padding: 10px;
-    box-sizing: border-box;
-    text-align: left;
-    border-bottom: 1px solid #d3d3d3;
-    //evenはlistの偶数番目に色がつく
-    &:nth-child(even){
-        background-color:#ffffe0;
-        opacity: 0.8;
-    }
-    &[data-selected="true"]{
-        background-color: #c2ffe3;
-        opacity: 0.8;
-    }
-}
-.memoTitle{
-    height: 1.5em;
-    margin: 0;
-    white-space:nowrap;
-    overflow: hidden;
-}
-.markdown{
-    float: left;
-    width:50%;
-    height: 500px;
-}
-
-</style>

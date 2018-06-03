@@ -20,9 +20,10 @@
 h2 {
     color: #666666;
     font-size: 20px;
-    margin: 20px;
+    margin: 10px;
     text-align: center;
 }
+//googleボタン実装
 a:hover {
     color: #42b983
 }
@@ -52,12 +53,36 @@ a:hover {
     top: 6px;
     box-shadow: none;
 }
+//ボタン以下
+img{
+    max-width: 900px;
+    border: 1px solid #e6e6e6;
+}
+.editorImage{
+    text-align: center;
+    margin: 30px 30px 0px 30px;
+}
 ul{
     display: flex;
     justify-content: center;
 }
+.news{
+    display: flex;
+}
+.date{
+    margin: 10px;
+    font-size: 13px;
+    background-color: #f5f5f5;
+    color: #666666;
+    border-radius: 5px;
+    line-height:2;
+}
+.updata{
+    margin: 10px;
+}
+//フッター
 .footer {
-    border-top: 1px solid #9b9b9b;
+    border-top: 1px solid #d3d3d3;
     padding: 10px;
 }
 li {
@@ -66,6 +91,38 @@ li {
     text-align: center;
 }
 //Editor
+.memoListWrapper{
+    width: 20%;
+    float: left;
+    border-top: 1px solid #d3d3d3;
+}
+.memoList{
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+    border-bottom: 1px solid #d3d3d3;
+    //evenはlistの偶数番目に色がつく
+    &:nth-child(even){
+        background-color:#ffffe0;
+        opacity: 0.8;
+    }
+    &[data-selected="true"]{
+        background-color: #c2ffe3;
+        opacity: 0.8;
+    }
+}
+.memoTitle{
+    height: 1.5em;
+    margin: 0;
+    white-space:nowrap;
+    overflow: hidden;
+}
+.markdown{
+    float: left;
+    width:50%;
+    height: 500px;
+}
+//以下Editorカスタマイズ
 .editorContainer{
     color: #4e4e4e;
 }
@@ -114,6 +171,8 @@ span{
     padding: 10px;
     border-top: 1px solid #d3d3d3;
     border-bottom: 1px dotted #d3d3d3;
+    font-size: 13px;
+    color: #666666;
 }
 .buttonList{
     padding: 10px;
